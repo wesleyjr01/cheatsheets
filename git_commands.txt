@@ -1,0 +1,70 @@
+# Adicione o nome do Usuario
+git config --global user.name "Wesley"
+
+# Adicione o email do Usuario
+git config --global user.email "wesleyjr0101@gmail.com"
+
+# Para verificar o username sendo utilizado
+git config --global user.name
+
+# Para verificar o nome de user e o email junto
+git config --global --list
+
+# Como listar todos os arquivos do diretorio atual
+dir -a
+
+# Como Criar um Repositorio Git
+git init
+# Nota: A pasta do repositorio nao precisa estar vazia! Podemos comecar a versionar depois.
+
+# Verificar Se Existe Arquivos Nao-Rastreados no repositorio
+git status
+
+# Adicionar um arquivo pro Git Rastrear
+git add readme.txt
+
+# Adicionar varios arquivos de uma vez pro Git Rastrear
+git add --all
+
+# Commit para salvar mudancas
+git commit -m "Versionamento inicial"
+
+# Ver Historico de Alteracoes
+git log
+
+# Ver Historico de Alteracoes entre dois commits
+git diff <token do commit A> <token do commit B>
+
+# Usar uma versao anterior a que temos no momento
+git checkout <token do commit B>
+
+# Voltar para o estado de HEAD
+git checkout master
+
+# Para desfazer a alteracao anterior de um arquivo da repo
+git checkout <nomedoarquivo>
+
+# Para desfazer todas as alteracos para um estado anterior na repo
+git reset --hard
+
+# Clonar um repositorio
+git clone <git url>
+
+# Mandar as alteracoes devolta pro github
+git push
+
+# Baixar a versao mais atual do repositorio previamente clonado
+git pull
+
+# Baixar a versao mais atual do repositorio previamente clonado do master branch
+git pull origin master
+
+# Para criar uma branch nova
+git branch <nomedabranch>
+git checkout <nomedabranch> # Para acessar a nova branch criada
+git push -u origin <nomedabranch> # Para mandar essa nova branch criada para o servidor
+
+# Limpar o repositorio local e sobrescrever com alteracoes atualizadas da branch master
+git fetch
+git reset --hard FETCH_HEAD
+git clean -df
