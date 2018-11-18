@@ -63,6 +63,7 @@ git pull origin master
 git branch <nomedabranch>
 git checkout <nomedabranch> # Para acessar a nova branch criada
 git push -u origin <nomedabranch>  # Para mandar essa nova branch criada para o servidor
+git branch -m <novo_nome> # Renomear uma branch
 
 # Limpar o repositorio local e sobrescrever com alteracoes atualizadas da branch master
 git fetch
