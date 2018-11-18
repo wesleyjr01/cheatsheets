@@ -60,7 +60,7 @@ git pull
 git pull origin master
 
 # Para criar uma branch nova
-git branch <nomedabranch>
+git branch <nomedabranch> # Este comando cria uma nova branch localmente
 git checkout <nomedabranch> # Para acessar a nova branch criada
 git push -u origin <nomedabranch>  # Para mandar essa nova branch criada para o servidor
 git branch -m <novo_nome> # Renomear uma branch
