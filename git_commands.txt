@@ -59,15 +59,21 @@ git pull
 # Baixar a versao mais atual do repositorio previamente clonado do master branch
 git pull origin master
 
-# Para criar uma branch nova
-git branch <nomedabranch> # Criada a nova branch
-git checkout <nomedabranch> # Para acessar a nova branch criada
-git push -u origin <nomedabranch>  # Para mandar essa nova branch criada para o servidor
 
 # Limpar o repositorio local e sobrescrever com alteracoes atualizadas da branch master
 git fetch
 git reset --hard FETCH_HEAD
 git clean -df
+
+##############	BRANCHES ##############
+
+# Para criar uma branch nova
+git branch <nomedabranch> # Criada a nova branch
+git checkout <nomedabranch> # Para acessar a nova branch criada
+git push -u origin <nomedabranch>  # Para mandar essa nova branch criada para o servidor
+
+# Checkar quantas branches remotas existem
+git branch -r
 
 # Mesclar as alteracoes com a branch master
 git checkout master # Primeiramente voltamos para a branch master
@@ -79,3 +85,5 @@ git reset --merge
 
 # Remover uma branch localmente, nao no servidor
 git branch -d <nomedabranch>
+
+##############	BRANCHES ##############
