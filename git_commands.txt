@@ -1,4 +1,4 @@
-# Adicione o nome do Usuario
+
 git config --global user.name "Wesley"
 
 # Adicione o email do Usuario
