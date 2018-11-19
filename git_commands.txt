@@ -72,6 +72,10 @@ git clean -df
 # Mesclar as alteracoes com a branch master
 git checkout master # Primeiramente voltamos para a branch master
 git merge develop
+git mergetool # Se der conflito
 
 # Cancelar o Merge
 git reset --merge
+
+# Remover uma branch localmente, nao no servidor
+git branch -d <nomedabranch>
