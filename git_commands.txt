@@ -72,3 +72,6 @@ git clean -df
 # Mesclar as alteracoes com a branch master
 git checkout master # Primeiramente voltamos para a branch master
 git merge develop
+
+# Cancelar o Merge
+git reset --merge
