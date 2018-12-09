@@ -17,6 +17,9 @@ $ scrapy genspider <spyder name> <domain to scrape>
 5) List all available spiders
 $ scrapy list
 
+6) Start Crawling
+$ scrapy crawl <spider name>
+
 
 6) Requests Commands
 $ response.xpath('//h1/a/text()').extract()
