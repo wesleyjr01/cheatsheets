@@ -71,6 +71,7 @@ git clean -df
 git branch <nomedabranch> # Criada a nova branch
 git checkout <nomedabranch> # Para acessar a nova branch criada
 git push -u origin <nomedabranch>  # Para mandar essa nova branch criada para o servidor
+git branch -m <novo_nome> # Renomear uma branch
 
 # Checkar quantas branches remotas existem
 git branch -r

@@ -1,0 +1,17 @@
+1) Show Scrapy commands
+$ scrapy
+
+2) Crate a new project
+$ scrapy startproject <spidername>
+
+3) Scrapy shell
+
+
+4) Genspider
+$ cd <project dir>
+$ scrapy genspider <spyder name> <domain to scrape>
+# Example: $ scrapy genspider quotes http://quotes.toscrape.com/
+# Generate new spider using pre-defined templates
+
+5) List all available spiders
+$ scrapy list
