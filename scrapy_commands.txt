@@ -5,7 +5,8 @@ $ scrapy
 $ scrapy startproject <spidername>
 
 3) Scrapy shell
-
+$ scrapy shell
+$ fetch('http://quotes.toscrape.com/')
 
 4) Genspider
 $ cd <project dir>
@@ -15,3 +16,8 @@ $ scrapy genspider <spyder name> <domain to scrape>
 
 5) List all available spiders
 $ scrapy list
+
+
+6) Requests Commands
+$ response.xpath('//h1/a/text()').extract()
+$ response.xpath('//*[@class="tag-item"]/a/text()').extract()
