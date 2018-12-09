@@ -1,0 +1,13 @@
+1) Create and activate virtualenv with name venv
+$ pip3 install virtualenv
+$ virtualenv venv -p python3
+$ source venv/bin/activate 
+
+2) List packages of current venv
+$ pip list
+
+3) Create a txt with all packages installedin current venv
+$ pip freeze > requirements.txt
+
+3) Install all packages from a .txt file named requirements.txt
+$ pip install -r requirements.txt
