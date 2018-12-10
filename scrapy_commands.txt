@@ -19,7 +19,7 @@ $ scrapy list
 6) Start Crawling
 $ scrapy crawl <spider name>
 
-
-6) Requests Commands
+7) Requests Commands
 $ response.xpath('//h1/a/text()').extract()
 $ response.xpath('//*[@class="tag-item"]/a/text()').extract()
+$ response.xpath('//*[@class="next"]/a/@href').extract_first()
