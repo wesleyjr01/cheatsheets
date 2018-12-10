@@ -5,8 +5,7 @@ $ scrapy
 $ scrapy startproject <spidername>
 
 3) Scrapy shell
-$ scrapy shell
-$ fetch('http://quotes.toscrape.com/')
+$ scrapy shell http://quotes.toscrape.com/
 
 4) Genspider
 $ cd <project dir>
