@@ -19,6 +19,9 @@ $ scrapy list
 6) Start Crawling
 $ scrapy crawl <spider name>
 
+7) Output Yielded Points
+scrapy crawl quotes -o quotes.json
+
 7) Requests Commands
 $ response.xpath('//h1/a/text()').extract()
 $ response.xpath('//*[@class="tag-item"]/a/text()').extract()
