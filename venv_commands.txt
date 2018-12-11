@@ -11,3 +11,12 @@ $ pip freeze > requirements.txt
 
 3) Install all packages from a .txt file named requirements.txt
 $ pip install -r requirements.txt
+
+
+//////////////////////////// DIGITAL OCEAN GUIDE ///////////////////////////////////
+https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-ubuntu-16-04
+
+$ mkdir environments
+$ cd environments
+$ python3 -m venv my_env
+$ source my_env/bin/activate
