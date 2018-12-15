@@ -1,3 +1,5 @@
 ~/dir$ export FLASK_APP=flaskblog.py
 
+~/dir$ export FLASK_DEBUG=1
+
 ~/dir$ flask run
