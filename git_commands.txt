@@ -24,7 +24,7 @@ git status
 git add readme.txt
 
 # Adicionar varios arquivos de uma vez pro Git Rastrear
-git add --all
+git add .
 
 # Commit para salvar mudancas
 git commit -m "Versionamento inicial"
