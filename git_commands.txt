@@ -8,84 +8,88 @@ git config --global user.email "wesleyjr0101@gmail.com"
 git config --global user.name
 
 # Para verificar o nome de user e o email junto
-git config --global --list
+$ git config --global --list
 
 # Como listar todos os arquivos do diretorio atual
-dir -a
+$ dir -a
 
 # Como Criar um Repositorio Git
-git init
+$ git init
 # Nota: A pasta do repositorio nao precisa estar vazia! Podemos comecar a versionar depois.
 
+# Agora precisamos conectar o repositório Git no seu computador com o que existe no GitHub.
+$ git remote add origin https://github.com/<your-github-username>/my-first-blog.git
+$ git push -u origin master
+
 # Verificar Se Existe Arquivos Nao-Rastreados no repositorio
-git status
+$ git status
 
 # Adicionar um arquivo pro Git Rastrear
-git add readme.txt
+$ git add readme.txt
 
 # Adicionar varios arquivos de uma vez pro Git Rastrear
-git add .
+$ git add .
 
 # Commit para salvar mudancas
-git commit -m "Versionamento inicial"
+$ git commit -m "Versionamento inicial"
 
 # Ver Historico de Alteracoes
-git log
+$ git log
 
 # Ver Historico de Alteracoes entre dois commits
-git diff <token do commit A> <token do commit B>
+$ git diff <token do commit A> <token do commit B>
 
 # Usar uma versao anterior a que temos no momento
-git checkout <token do commit B>
+$ git checkout <token do commit B>
 
 # Voltar para o estado de HEAD
-git checkout master
+$ git checkout master
 
 # Para desfazer a alteracao anterior de um arquivo da repo
-git checkout <nomedoarquivo>
+$ git checkout <nomedoarquivo>
 
 # Para desfazer todas as alteracos para um estado anterior na repo
-git reset --hard
+$ git reset --hard
 
 # Clonar um repositorio
-git clone <git url>
+$ git clone <git url>
 
 # Mandar as alteracoes devolta pro github
-git push
+$ git push
 
 # Baixar a versao mais atual do repositorio previamente clonado
-git pull
+$ git pull
 
 # Baixar a versao mais atual do repositorio previamente clonado do master branch
-git pull origin master
+$ git pull origin master
 
 
 # Limpar o repositorio local e sobrescrever com alteracoes atualizadas da branch master
-git fetch
-git reset --hard FETCH_HEAD
-git clean -df
+$ git fetch
+$ git reset --hard FETCH_HEAD
+$ git clean -df
 
 ##############	BRANCHES ##############
 
 # Para criar uma branch nova
-git checkout -b <nome da branch> # Cria a branch <nome da branch>, e ja muda pra ela
-git branch <nomedabranch> # Criada a nova branch
-git checkout <nomedabranch> # Para acessar a nova branch criada
-git push -u origin <nomedabranch>  # Para mandar essa nova branch criada para o servidor
-git branch -m <novo_nome> # Renomear uma branch
+$ git checkout -b <nome da branch> # Cria a branch <nome da branch>, e ja muda pra ela
+$ git branch <nomedabranch> # Criada a nova branch
+$ git checkout <nomedabranch> # Para acessar a nova branch criada
+$ git push -u origin <nomedabranch>  # Para mandar essa nova branch criada para o servidor
+$ git branch -m <novo_nome> # Renomear uma branch
 
 # Checkar quantas branches remotas existem
-git branch -r
+$ git branch -r
 
 # Mesclar as alteracoes com a branch master
-git checkout master # Primeiramente voltamos para a branch master
-git merge develop
-git mergetool # Se der conflito
+$ git checkout master # Primeiramente voltamos para a branch master
+$ git merge develop
+$ git mergetool # Se der conflito
 
 # Cancelar o Merge
-git reset --merge
+$ git reset --merge
 
 # Remover uma branch localmente, nao no servidor
-git branch -d <nomedabranch>
+$ git branch -d <nomedabranch>
 
 ##############	BRANCHES ##############
