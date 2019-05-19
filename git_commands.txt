@@ -1,11 +1,11 @@
 # Adicione o nome do Usuario
-git config --global user.name "Wesley"
+$ git config --global user.name "Wesley"
 
 # Adicione o email do Usuario
-git config --global user.email "wesleyjr0101@gmail.com"
+$ git config --global user.email "wesleyjr0101@gmail.com"
 
 # Para verificar o username sendo utilizado
-git config --global user.name
+$ git config --global user.name
 
 # Para verificar o nome de user e o email junto
 $ git config --global --list
