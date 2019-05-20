@@ -78,6 +78,9 @@ $ git checkout <nomedabranch> # Para acessar a nova branch criada
 $ git push -u origin <nomedabranch>  # Para mandar essa nova branch criada para o servidor
 $ git branch -m <novo_nome> # Renomear uma branch
 
+# Remover uma branch localmente, nao no servidor
+$ git branch -d <nomedabranch>
+
 # Checkar quantas branches remotas existem
 $ git branch -r
 
@@ -89,7 +92,5 @@ $ git mergetool # Se der conflito
 # Cancelar o Merge
 $ git reset --merge
 
-# Remover uma branch localmente, nao no servidor
-$ git branch -d <nomedabranch>
 
 ##############	BRANCHES ##############
