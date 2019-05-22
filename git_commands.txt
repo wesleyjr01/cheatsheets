@@ -78,6 +78,9 @@ $ git checkout <nomedabranch> # Para acessar a nova branch criada
 $ git push -u origin <nomedabranch>  # Para mandar essa nova branch criada para o servidor
 $ git branch -m <novo_nome> # Renomear uma branch
 
+# Dar push de uma branch nova pra numvem
+git push --set-upstream origin <nome_da_branch_nova>
+
 # Remover uma branch localmente, nao no servidor
 $ git branch -d <nomedabranch>
 
