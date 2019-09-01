@@ -37,9 +37,24 @@ $ cd ~/Downloads
 * Como criar um diretorio?
 $ mkdir LinuxBasico
 
-* Como remover um diretorio vazio?
-$ rmdir Aula2
-
 * Como remover um arquivo ou diretorio?
 $ rm arquivo
 $ rm -r Aula1
+
+--- 01/09/2019 ---
+### UTILIZANDO WORKSPACES ###
+
+* Mover um processo atual para outro workspace:
+CRTL + ALT + SHIFT + PgDown
+
+* Navegar entre Workspaces:
+CTRL + ALT + PgUp/PgDown
+
+* Maximiza a tela do Workspace Atual
+Windows + PgUp
+
+* Setar para Esquerda o processo do Workspace Atual
+Windows + PgLeft
+
+* Setar para Direita o processo do Workspace Atual
+Windows + PgRight
