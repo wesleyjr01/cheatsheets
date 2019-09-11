@@ -51,10 +51,19 @@ CRTL + ALT + SHIFT + PgDown
 CTRL + ALT + PgUp/PgDown
 
 * Maximiza a tela do Workspace Atual
-Windows + PgUp
+Super + PgUp
 
 * Setar para Esquerda o processo do Workspace Atual
-Windows + PgLeft
+Super + PgLeft
 
 * Setar para Direita o processo do Workspace Atual
-Windows + PgRight
+Super + PgRight
+
+### GREP, source: https://neowaylabs.github.io/programming/unix-shell-for-data-scientists/ ###
+* Problem: We want to find where the library ggplot was used in any script in the directory r_project.
+$ grep -rn ggplot r_project/
+* option -r stands for recursion
+* option -n tells grep to show the line numbers
+
+* Problem: Given a directory composed of subdirectories whose names contain a date, we want to get the complete name of one or more subdirectories containing a date like 2018_05.
+$ ls models_by_date/ | grep 2018_05
