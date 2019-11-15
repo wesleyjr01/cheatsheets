@@ -1,2 +1,0 @@
-cat_cols = list(train.select_dtypes(include=['object']).columns)
-num_cols = list(train.select_dtypes(exclude=['object']).columns)
