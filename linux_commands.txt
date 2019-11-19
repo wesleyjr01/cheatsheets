@@ -60,6 +60,9 @@ Super + PgLeft
 Super + PgRight
 
 ### GREP, source: https://neowaylabs.github.io/programming/unix-shell-for-data-scientists/ ###
+SYNTAX:
+$ grep option search_pattern file_path
+
 * Problem: We want to find where the library ggplot was used in any script in the directory r_project.
 $ grep -rn ggplot r_project/
 * option -r stands for recursion
