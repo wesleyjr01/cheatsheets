@@ -84,6 +84,9 @@ git push --set-upstream origin <nome_da_branch_nova>
 # Remover uma branch localmente, nao no servidor
 $ git branch -d <nomedabranch>
 
+# Remover uma branch remota
+$ git push origin --delete <nomedabranch>
+
 # Checkar quantas branches remotas existem
 $ git branch -r
 
