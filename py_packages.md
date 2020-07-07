@@ -8,6 +8,7 @@ the module name A.B designates a submodule named B in a package named A.
 
 * Ex:
 
+```
 sound/                          Top-level package
       __init__.py               Initialize the sound package
       formats/                  Subpackage for file format conversions
@@ -31,7 +32,7 @@ sound/                          Top-level package
               vocoder.py
               karaoke.py
               ...
-
+```
 
 Note that when using from package import item, the item can be either a submodule (or subpackage) of the package, or some other name defined in the package, like a function, class or variable.
 
