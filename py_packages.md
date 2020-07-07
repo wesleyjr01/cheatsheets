@@ -1,10 +1,10 @@
 https://docs.python.org/3/tutorial/modules.html
 
-* A Module is  a python file ex: 'somefile.py', it's name is 'somefile'.
+* A Module is  a python file ex: `somefile.py`, it's name is `somefile`.
 
 * Packages are collections of modules. Packages are a way of structuring 
-Python’s module namespace by using “dotted module names”. For example, 
-the module name A.B designates a submodule named B in a package named A.
+Python’s module namespace by using **dotted module names**. For example, 
+the module name `A.B` designates a submodule named B in a package named A.
 
 * Ex:
 
