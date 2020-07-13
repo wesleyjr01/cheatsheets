@@ -39,7 +39,7 @@ Note that when using from package import item, the item can be either a submodul
 Contrarily, when using syntax like import item.subitem.subsubitem, each item except for the last must be a package; the last item can be a module or a package but can’t be a class or function or variable defined in the previous item.
 
 
------------------  Intra-package References ----------------------
+-----------------  Intra-package References ----------------------   
 When packages are structured into subpackages (as with the sound 
 package in the example), you can use absolute imports to refer to 
 submodules of siblings packages. For example, if the 
