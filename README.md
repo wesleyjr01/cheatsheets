@@ -1,2 +1,2 @@
-# Commands_Git_Linux
-This repo will contain some .txt files with information about git commands, linux commands, virtualenv creation commands. Usefull stuff.
+### Repository with some usefull Cheatsheets, everyday usage!
+Some repetitive or usefull commands from different technologies will be found here.
