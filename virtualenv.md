@@ -15,3 +15,12 @@ $ cd environments
 $ python3 -m venv my_env
 $ source my_env/bin/activate
 ```
+
+# [Flask Tutorial](https://flask.palletsprojects.com/en/1.1.x/installation/)
+
+```bash
+$ apt-get install -y python3-venv
+$ mkdir myproject
+$ cd myproject
+$ python3 -m venv venv
+```
