@@ -36,9 +36,24 @@ $ docker ps
 $ docker ps -a
 ```
 
-### Build a image from Dockerfile in current foler
+### Build a image from Dockerfile in current folder
 ```
 $ docker build .
+```
+
+### Build a image from Dockerfile in current folder and use --tag to give it a name
+```
+$ docker build . --tag myimage:1.0
+```
+
+### Run the image your built with iteractive mode
+```
+$ docker run -t myimage:1.0
+```
+
+### Check which docker images you have
+```
+$ docker images
 ```
 
 
