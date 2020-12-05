@@ -33,6 +33,11 @@ $ docker ps
 $ docker ps -a
 ```
 
+### Build a image from Dockerfile in current foler
+```
+$ docker build .
+```
+
 
 ### To start a stopped container, use docker start
 ```
