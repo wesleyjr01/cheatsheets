@@ -72,6 +72,31 @@ $ docker stop sharp_volhard
 $ docker rm festive_williams
 ```
 
+# Docker Directives
+
+### COPY
+* The COPY instruction copies new files or directories from <src> and adds them to the filesystem of the container at the path <dest>.
+```Dockerfile
+COPY requirements.txt /code/
+```
+	
+### VOLUME
+* The VOLUME instruction creates a mount point with the specified name and marks it as holding externally mounted volumes from native host or other containers. The value can be a JSON array, VOLUME ["/var/log/"], or a plain string with multiple arguments, such as VOLUME /var/log or VOLUME /var/log /var/db. For more information/examples and mounting instructions via the Docker client, refer to [Share Directories via Volumes documentation](https://docs.docker.com/storage/volumes/).
+
+### USER
+```
+USER <user>[:<group>]
+```
+The USER instruction sets the user name (or UID) and optionally the user group (or GID) to use when running the image and for any RUN, CMD and ENTRYPOINT instructions that follow it in the Dockerfile.
+
+### WORKDIR
+```
+WORKDIR /path/to/workdir
+```
+The WORKDIR instruction sets the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD instructions that follow it in the Dockerfile. If the WORKDIR doesn’t exist, it will be created even if it’s not used in any subsequent Dockerfile instruction.
+
+The WORKDIR instruction can be used multiple times in a Dockerfile. If a relative path is provided, it will be relative to the path of the previous WORKDIR instruction. 
+
 # Docker Compose
 
 ### Rename images   
