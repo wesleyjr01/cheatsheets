@@ -77,6 +77,11 @@ $ docker rm festive_williams
 $ docker exec -t -i <container_id> bash
 ```
 
+### Inspect container informations
+```
+$ docker container inspect <container_id>
+```
+
 # Docker Directives
 
 ### COPY
