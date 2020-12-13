@@ -72,6 +72,11 @@ $ docker stop sharp_volhard
 $ docker rm festive_williams
 ```
 
+### Run a container in iterative mode
+```
+$ docker exec -t -i <container_id> bash
+```
+
 # Docker Directives
 
 ### COPY
