@@ -1,0 +1,2 @@
+# POST Request to a Heroku App using CURL, data coming from a file 'input_test.json'
+curl --header "Content-Type: application/json" --request POST --data @input_test.json https://udemy-ml-api-01.herokuapp.com/v1/predict/regression
