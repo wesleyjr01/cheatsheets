@@ -72,4 +72,5 @@ file_content = object_.get()["Body"].read()
 
 fp = io.BytesIO(file_content)
 list_of_json_files = [json_ for json_ in jsonlines.Reader(fp)]
+fp.close()
 ```
