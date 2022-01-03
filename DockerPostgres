@@ -1,0 +1,8 @@
+docker run -d \                                                          
+    --name localpostgres \
+    -p 5432:5432 \
+    --network host \
+    -e POSTGRES_DB=local \   
+    -e POSTGRES_USER=admin \   
+    -e POSTGRES_PASSWORD=admin \   
+    postgres
