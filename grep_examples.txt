@@ -1,0 +1,3 @@
+find . -name '*.sql' | grep -i "SFDC\|Salesforce" 
+grep -ri -n "sfdc_lead" bi/Database
+grep -ri -n "opportunityproduct" --exclude-dir={DimModel,Nimbus,Documentation,ModeAnalytics,Sisense,SSIS} bi/Database
