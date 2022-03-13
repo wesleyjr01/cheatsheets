@@ -1,0 +1,1 @@
+ffmpeg -ss 01:39:00 -t 00:40:00 -i intput.mp4 -vcodec copy -acodec copy output.mp4
