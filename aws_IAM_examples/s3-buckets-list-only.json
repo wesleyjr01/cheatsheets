@@ -1,0 +1,25 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListAllMyBuckets",
+                "s3:GetBucketTagging"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "",
+            "Effect": "Allow",
+            "Action": "s3:ListBucket",
+            "Resource": [
+                "arn:aws:s3:::*-bucket-anytag-*",
+                "arn:aws:s3:::glue-jobs-*",
+                "arn:aws:s3:::terraform-anytag-state-*",
+                "arn:aws:s3:::athena-*"
+            ]
+        }
+    ]
+}

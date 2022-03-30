@@ -1,0 +1,26 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "",
+            "Effect": "Allow",
+            "Action": [
+                "dms:ModifyReplicationInstance",
+                "dms:Start*",
+                "dms:Stop*",
+                "dms:ApplyPendingMaintenanceAction",
+                "dms:CancelReplicationTaskAssessmentRun",
+                "dms:RebootReplicationInstance",
+                "dms:RefreshSchemas",
+                "dms:ReloadTables",
+                "dms:CancelReplicationTaskAssessmentRun"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:ResourceTag/rethink-modernized": "anytag1"
+                }
+            }
+        }
+    ]
+}

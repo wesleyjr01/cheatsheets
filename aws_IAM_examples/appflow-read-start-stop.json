@@ -1,0 +1,29 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "",
+            "Effect": "Allow",
+            "Action": [
+                "appflow:Describe*",
+                "appflow:List*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "",
+            "Effect": "Allow",
+            "Action": [
+                "appflow:RunFlow",
+                "appflow:StartFlow",
+                "appflow:StopFlow"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:ResourceTag/rethink-modernized": "anytag1"
+                }
+            }
+        }
+    ]
+}
