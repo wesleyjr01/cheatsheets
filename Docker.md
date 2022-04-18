@@ -137,3 +137,7 @@ The WORKDIR instruction can be used multiple times in a Dockerfile. If a relativ
 
 ### Run a container in interactive mode
 * `$ docker run -it <IMAGE_ID> /bin/bash`
+	
+	
+### Difference between CMD and ENTRYPOINT
+* https://stackoverflow.com/questions/21553353/what-is-the-difference-between-cmd-and-entrypoint-in-a-dockerfile
