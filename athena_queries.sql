@@ -16,3 +16,7 @@
 -- ) AS
 -- SELECT * FROM db.table2
 -- ;
+
+
+-- dedup query
+-- SELECT count(*), id FROM "raw-db-develop-us-east-1"."auditlog"  group by id having count(*)>1;
