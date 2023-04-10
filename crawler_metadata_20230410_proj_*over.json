@@ -1,0 +1,49 @@
+{
+    "Crawler": {
+        "Name": "glue-crawler-raw-transactional-api-development-us-west-1",
+        "Role": "iam-role-glue-crawler-transactional-development-us-west-1",
+        "Targets": {
+            "S3Targets": [
+                {
+                    "Path": "s3://********/postgres/transacional/api_schema/",
+                    "Exclusions": []
+                }
+            ],
+            "JdbcTargets": [],
+            "MongoDBTargets": [],
+            "DynamoDBTargets": [],
+            "CatalogTargets": [],
+            "DeltaTargets": []
+        },
+        "DatabaseName": "*****",
+        "Description": "Crawler created by ***'s glue/crawler_s3 module to create tables at ****** db",
+        "Classifiers": [],
+        "RecrawlPolicy": {
+            "RecrawlBehavior": "CRAWL_EVERYTHING"
+        },
+        "SchemaChangePolicy": {
+            "UpdateBehavior": "LOG",
+            "DeleteBehavior": "LOG"
+        },
+        "LineageConfiguration": {
+            "CrawlerLineageSettings": "DISABLE"
+        },
+        "State": "READY",
+        "CrawlElapsedTime": 0,
+        "CreationTime": "2023-04-06T14:09:40-04:00",
+        "LastUpdated": "2023-04-07T21:34:24-04:00",
+        "LastCrawl": {
+            "Status": "SUCCEEDED",
+            "LogGroup": "/aws-glue/crawlers",
+            "LogStream": "*****",
+            "MessagePrefix": "*****",
+            "StartTime": "2023-04-10T10:28:36-04:00"
+        },
+        "Version": 3,
+        "Configuration": "{\"Version\":1.0,\"CrawlerOutput\":{\"Partitions\":{\"AddOrUpdateBehavior\":\"InheritFromTable\"},\"Tables\":{\"AddOrUpdateBehavior\":\"MergeNewColumns\"}}}",
+        "LakeFormationConfiguration": {
+            "UseLakeFormationCredentials": false,
+            "AccountId": ""
+        }
+    }
+}
