@@ -1,0 +1,2 @@
+# output terraform plan to a file (only what it matters)
+terraform plan -no-color -var-file=development.tfvars -lock=false | sed -n '/Terraform will perform the following actions:/,$p' > tfplan.txt                                                                                           git:main*
