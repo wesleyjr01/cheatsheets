@@ -1,2 +1,6 @@
 # output terraform plan to a file (only what it matters)
 terraform plan -no-color -var-file=development.tfvars -lock=false | sed -n '/Terraform will perform the following actions:/,/to destroy./ p' > tfplan.txt
+
+
+# Terraform Docs - generate Readme
+sudo docker run --rm --volume "$(pwd):/terraform-docs" -u $(id -u) quay.io/terraform-docs/terraform-docs:0.16.0 markdown /terraform-docs > README.md
