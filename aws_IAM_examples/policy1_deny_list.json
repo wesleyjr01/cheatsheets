@@ -1,0 +1,60 @@
+{
+    "Policy": {
+        "Version": "2008-10-17",
+        "Id": "DenyDeletePolicy",
+        "Statement": [
+            {
+                "Sid": "DenyDeletePolicy",
+                "Effect": "Deny",
+                "Principal": {
+                    "AWS": "*"
+                },
+                "Action": "s3:DeleteBucket",
+                "Resource": "arn:aws:s3:::<BUCKET_NAME>"
+            },
+            {
+                "Sid": "DenyReadTFStateFile",
+                "Effect": "Deny",
+                "Principal": "*",
+                "Action": [
+                    "s3:List*",
+                    "s3:Get*"
+                ],
+                "Resource": [
+                    "arn:aws:s3:::<BUCKET_NAME>",
+                    "arn:aws:s3:::<BUCKET_NAME>/*"
+                ],
+                "Condition": {
+                    "ArnNotEquals": {
+                        "aws:PrincipalArn": [
+                            "arn:aws:iam::<ACCOUNT_NUMBER>:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_IAMAdmin_2a1a96478411a475",
+                            "arn:aws:iam::<ACCOUNT_NUMBER>:user/dl-deployment-user",
+                            "arn:aws:iam::<ACCOUNT_NUMBER>:user/tfstate-ReadOnly-user"
+                        ]
+                    }
+                }
+            },
+            {
+                "Sid": "DenyWriteTFStateFile",
+                "Effect": "Deny",
+                "Principal": "*",
+                "Action": [
+                    "s3:Put*",
+                    "s3:Delete*"
+                ],
+                "Resource": [
+                    "arn:aws:s3:::<BUCKET_NAME>",
+                    "arn:aws:s3:::<BUCKET_NAME>/*"
+                ],
+                "Condition": {
+                    "ArnNotEquals": {
+                        "aws:PrincipalArn": [
+                            "arn:aws:iam::<ACCOUNT_NUMBER>:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_IAMAdmin_2a1a96478411a475",
+                            "arn:aws:iam::<ACCOUNT_NUMBER>:user/dl-deployment-user"
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
