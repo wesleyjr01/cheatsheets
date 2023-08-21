@@ -1,0 +1,21 @@
+{
+    "Version": "2012-10-17",
+    "Id": "OnlyDeploymentUserCanChangeTfState",
+    "Statement": [
+        {
+            "Sid": "",
+            "Principal": "*",
+            "Effect": "Deny",
+            "Action": ["s3:PutObject", "s3:Delete*"],
+            "Resource": [
+                "arn:aws:s3:::<BUCKET_NAME>/<PREFIX_1>/*",
+                "arn:aws:s3:::<BUCKET_NAME>/<PREFIX_2>/*"
+            ],
+			"Condition": {
+				"ArnNotEquals": {
+					"aws:PrincipalArn": "arn:aws:iam::<ACCOUNT_NUMBER>:user/<DEPLOYMENT_USER_NAME>"
+				}
+			}
+        }
+    ]
+}
