@@ -1,0 +1,25 @@
+usr=$(USER)
+install: python3-10 virtualenv model_package jupyter
+	. venv/bin/activate; \
+	python -m ipykernel install --user --name=venv
+
+
+model_package: virtualenv
+	. venv/bin/activate; \
+	pip install -r requirements.txt
+
+jupyter: python3-10 virtualenv
+	command -v jupyter-notebook || sudo apt install jupyter-notebook; \
+	sudo chown -R $(usr): ~/.local/share/jupyter; \
+
+
+python3-10:
+	python3.10 --version || sudo apt update; \
+	python3.10 --version || sudo apt install software-properties-common; \
+	python3.10 --version || sudo add-apt-repository ppa:deadsnakes/ppa; \
+	python3.10 --version || sudo apt install python3.10; \
+
+
+virtualenv:
+	virtualenv --version || sudo apt install virtualenv; \
+	test -d venv || virtualenv venv -p python3.10
