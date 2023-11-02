@@ -1,5 +1,0 @@
-# Reference: https://itslinuxfoss.com/install-virtualenv-ubuntu-22-04/
-
-$ sudo python3 -m venv myapplication
-$ ls myapplication
-$ source myapplication/bin/activate
