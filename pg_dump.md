@@ -1,24 +1,28 @@
-
-############################# pg_dump ###############################################
 # Create a dump from AWS RDS: (This doesn't include the users)
-pg_dump -h <HOST> -U <USERNAME> -f dump.sql -d <SOURCE_DATABASE_TO_CONNECT>
+### pg_dump
+```bash
+$ pg_dump -h <HOST> -U <USERNAME> -f dump.sql -d <SOURCE_DATABASE_TO_CONNECT>
+```
 
-# Load pg_dump into local database: https://hevodata.com/learn/postgresql-dump-import/#:~:text=Postgres%20Import%20Dump%20process%20can,file%20with%20the%20psql%20tool.
-psql -U <USERNAME> -d <DABASE_NAME_AT_TARGET> -f dump.sql
-############################# pg_dump ###############################################
+### Load pg_dump into local database: 
+* https://hevodata.com/learn/postgresql-dump-import/-:~:text=Postgres%20Import%20Dump%20process%20can,file%20with%20the%20psql%20tool.
+```bash
+$ psql -U <USERNAME> -d <DABASE_NAME_AT_TARGET> -f dump.sql
+```
 
 
 
-############################# pg_dumpall ###############################################
-https://www.postgresql.org/docs/current/app-pg-dumpall.html
+# pg_dumpall: Create Users/Roles
+* https://www.postgresql.org/docs/current/app-pg-dumpall.html
 * `--globals-only` to dump only objects(roles and tablespaces), no databases
 * `--roles-only` to dump only roles, no databases or tablespaces.
 * Example of exporting only roles/users:
-  * `pg_dumpall --roles-only --no-role-passwords -h <HOST> -U <USERNAME> -f <OUTPUT_FILE>`
-############################# pg_dumpall ###############################################
+```bash
+$ pg_dumpall --roles-only --no-role-passwords -h <HOST> -U <USERNAME> -f <OUTPUT_FILE>
+```
 
 
-#### Steps to dump/recreate a database with the users (Have to set the user passwords afterward) ####
+# Steps to dump/recreate a database with the users (Have to set the user passwords afterward)
 1) Dump the database with pg_dump: `pg_dump -h <HOST> -U <USERNAME> -f dump.sql -d <DATABASE_TO_CONNECT>`
 2) Create a new DB on the target database:
  * `$ su - postgres`
