@@ -1,0 +1,17 @@
+
+############################# pg_dump ###############################################
+# Create a dump from AWS RDS: (This doesn't include the users)
+pg_dump -h <HOST> -U <USERNAME> -f dump.sql <DATABASE>
+
+# Load pg_dump into local database: https://hevodata.com/learn/postgresql-dump-import/#:~:text=Postgres%20Import%20Dump%20process%20can,file%20with%20the%20psql%20tool.
+psql -U <USERNAME> -f dump.sql
+############################# pg_dump ###############################################
+
+
+
+############################# pg_dumpall ###############################################
+https://www.postgresql.org/docs/current/app-pg-dumpall.html
+* `--globals-only` to dump only objects(roles and tablespaces), no databases
+* `--roles-only` to dump only roles, no databases or tablespaces.
+* Example of exporting only roles/users:
+  * `pg_dumpall --roles-only --no-role-passwords -h <HOST> -U <USERNAME> -f <OUTPUT_FILE>`
