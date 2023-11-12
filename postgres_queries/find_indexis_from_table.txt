@@ -1,0 +1,4 @@
+-- search indexis created on a table
+select *
+from pg_indexes
+where tablename in ('sentence')
