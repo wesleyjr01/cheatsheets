@@ -1,3 +1,6 @@
+-- reference
+https://medium.com/@paramsingh96/optimizing-pattern-searching-queries-in-postgresql-84087d9bac8c
+
 -- extension
 create extension pg_trgm with schema pg_catalog;
 
