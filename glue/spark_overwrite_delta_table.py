@@ -22,7 +22,6 @@ sc = (
         .config("spark.sql.avro.datetimeRebaseModeInWrite", "CORRECTED")
         .config("spark.sql.avro.datetimeRebaseModeInRead", "CORRECTED")
         .config("spark.databricks.delta.fixSchema.GlueCatalog", "true")
-        # .config("spark.databricks.delta.catalog.update.hiveSchema.enabled") # test this
         .getOrCreate()
     )
 glueContext = GlueContext(sc)
