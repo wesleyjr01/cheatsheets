@@ -1,0 +1,40 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "dms:Describe*",
+                "dms:List*",
+                "dms:Test*",
+                "dms:Get*",
+                "glue:Get*",
+                "glue:List*",
+                "glue:Search*",
+                "s3:Get*",
+                "s3:List*",
+                "athena:Get*",
+                "athena:List*",
+                "logs:Get*",
+                "logs:List*",
+                "logs:Describe*",
+                "rds:Describe*",
+                "rds:List*",
+                "iam:List*",
+                "iam:Get*",
+                "ec2:Describe*",
+                "ec2:Get*",
+                "ec2:List*",
+                "states:Describe*",
+                "states:List*",
+                "states:Get*",
+                "scheduler:List*",
+                "scheduler:Get*",
+                "airflow:Get*",
+                "airflow:List*"
+            ],
+            "Effect": "Allow",
+            "Resource": "*",
+            "Sid": "ReadOnlyActions"
+        }
+    ],
+    "Version": "2012-10-17"
+}
