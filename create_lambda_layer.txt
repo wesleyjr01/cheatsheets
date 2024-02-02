@@ -1,0 +1,5 @@
+Steps to build and deploy a Lambda Layer with package psycopg2 and pandas:
+1) $ pip install --target ./python psycopg2-binary pandas
+2) $ zip -r python.zip python
+3) Now upload the python.zip to s3
+4) Create a Lambda Layer referencing the python.zip from s3
