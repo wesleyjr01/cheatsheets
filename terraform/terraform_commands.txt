@@ -4,3 +4,7 @@ terraform plan -no-color -var-file=development.tfvars -lock=false | sed -n '/Ter
 
 # Terraform Docs - generate Readme
 sudo docker run --rm --volume "$(pwd):/terraform-docs" -u $(id -u) quay.io/terraform-docs/terraform-docs:0.16.0 markdown /terraform-docs > README.md
+
+# symbolink link to config files
+ln -s ./environment/dev/backend.tf ./ && ln -s ./environment/dev/terraform.tfvars ./
+ln -s ./environment/prod/backend.tf ./ && ln -s ./environment/prod/terraform.tfvars ./
