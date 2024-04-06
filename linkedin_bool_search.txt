@@ -1,0 +1,1 @@
+("Data Engineer" OR "Senior Data Engineer" OR "AWS Data Engineer" OR "Platform Engineer") AND (AWS AND Python OR Terraform) AND (Brazil OR LATAM OR "Latin America")
