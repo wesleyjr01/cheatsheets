@@ -1,0 +1,8 @@
+select 
+    cte_flat.flattened_attribute_value
+    ,cte_flat.document_id
+    ,cte_attr.*
+from cte_flat_da as cte_flat
+join cte_attribute_types_to_document_types as cte_attr
+    on array_contains(cte_flat.flattened_attribute_key::VARIANT, cte_attr.da_keys)
+where cte_flat.flattened_attribute_value is not null
