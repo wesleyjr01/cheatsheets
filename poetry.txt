@@ -1,0 +1,3 @@
+# Remove Dangling poetry env:
+cd /Users/wjr/Library/Application\ Support/pypoetry
+rm -rf venv
